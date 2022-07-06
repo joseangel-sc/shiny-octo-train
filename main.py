@@ -24,4 +24,3 @@ def create_items_table():
                 cursor.execute(f"insert into ITEMS (itemId, itemNumber) values ({_id}, {item})")
             conn.commit() 
             
-

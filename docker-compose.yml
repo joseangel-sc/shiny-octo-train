@@ -6,10 +6,12 @@ services:
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
-      MYSQL_USER: pinner
-      MYSQL_PASSWORD: pintastic 
-      MYSQL_DATABASE: pinterest 
-      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"      
+      MYSQL_USER: adminuser
+      MYSQL_PASSWORD: fantastic
+      MYSQL_DATABASE: social 
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"    
+    volumes:
+      - "./init.sql:/docker-entrypoint-initdb.d/1.sql"  
     ports:
       - "3306:3306"
 
